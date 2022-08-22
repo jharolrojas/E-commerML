@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import '../styles/Login.css'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -19,9 +19,11 @@ const Login = () => {
       navigate("/");
       dispatch(saveToken(res.data.data.token))
       localStorage.setItem("token",res.data.data.token);
+      dispatch(GetPurchasesThunk())
+      dispatch(GetProductsCarThunk())
       
     })
-    .catch(setTimeout(function() {setInvaid(true)}, 5000))
+    .catch(setTimeout(function() {setInvaid(true)}, 3000))
   };
 console.log(invalid)
     return (
