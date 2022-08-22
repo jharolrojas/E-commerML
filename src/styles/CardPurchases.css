@@ -33,3 +33,10 @@
     right: 10px;
     top: 30%;
 }
+
+@media (max-width : 500px) {
+    
+    .buttomSee{
+        display: none;
+    }
+}

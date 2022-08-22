@@ -21,7 +21,7 @@ const Login = () => {
       localStorage.setItem("token",res.data.data.token);
       
     })
-    .catch(onclick= setTimeout(setInvaid(true), 5000))
+    .catch(setTimeout(function() {setInvaid(true)}, 5000))
   };
 console.log(invalid)
     return (

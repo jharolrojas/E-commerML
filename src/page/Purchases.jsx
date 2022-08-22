@@ -7,6 +7,7 @@ import '../styles/Purchases.css'
 const Purchases = () => {
   const purchases = useSelector((state) => state.purchases);
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(GetPurchasesThunk());
   }, []);

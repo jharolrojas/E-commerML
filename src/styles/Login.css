@@ -28,7 +28,7 @@ background-color: #fff059;
 .dataLogin h5 {
     
     font-size: 1.7rem;
-  
+
   }
   .label{
     font-size: 11px;
@@ -36,4 +36,19 @@ background-color: #fff059;
   .createUser{
     color: #0D6EFD;
     font-weight: bold;
+  }
+  @media (max-width : 450px) {
+    .login{
+      width: 300px;
+      height: 380px;
+     
+    }
+    .input{
+     
+      max-width: 250px;
+      
+     
+  }
+  
+    
   }
