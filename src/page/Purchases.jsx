@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CardPurchases from "../components/CardPurchases";
 import { GetPurchasesThunk } from "../store/slices/purchases.slice";
-import '../styles/purchases.css'
+import '../styles/Purchases.css'
 
 const Purchases = () => {
   const purchases = useSelector((state) => state.purchases);
