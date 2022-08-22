@@ -11,7 +11,7 @@ import {
 import "../styles/NavBar.css";
 import { useForm } from 'react-hook-form';
 import CarShopping from "../page/CarShopping";
-import getConfig from "../utils/Getconfig";
+
 import { useNavigate } from "react-router-dom";
 import { saveLogin } from "../store/slices/login.slice";
 import { saveCarShopping } from "../store/slices/carShopping.slice";
