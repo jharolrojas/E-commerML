@@ -16,7 +16,7 @@ const ProductsRelated = ({product}) => {
     return (
         <div className='productInfoR mt-2'>
             {related.map(element => (
-                <CardProductRelated product={element}/>
+                <CardProductRelated product={element} key={element.id}/>
             ))}
             
             

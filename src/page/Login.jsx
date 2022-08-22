@@ -23,7 +23,7 @@ const Login = () => {
       dispatch(GetProductsCarThunk())
       
     })
-    .catch(setTimeout(function() {setInvaid(true)}, 3000))
+    .catch(setTimeout(function() {setInvaid(true)}, 2000))
   };
 console.log(invalid)
     return (
