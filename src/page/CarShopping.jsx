@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import CardShopping from "../components/CardShopping";
-import { GetProductsCarThunk, saveCarShopping } from "../store/slices/carShopping.slice";
+import {
+  GetProductsCarThunk,
+  saveCarShopping,
+} from "../store/slices/carShopping.slice";
 import { PostPurchasesThunk } from "../store/slices/purchases.slice";
 
 const CarShopping = () => {
@@ -16,13 +19,12 @@ const CarShopping = () => {
     dispatch(GetProductsCarThunk());
   }, []);
   const productsCar = useSelector((state) => state.carShopping);
-console.log(productsCar)
-const buy = () =>{
-  dispatch(PostPurchasesThunk(productsCar))
- dispatch(saveCarShopping([]))
- setAddBuy(true) 
- 
-}
+
+  const buy = () => {
+    dispatch(PostPurchasesThunk(productsCar));
+    dispatch(saveCarShopping([]));
+    setAddBuy(true);
+  };
   return (
     <div>
       <div variant="primary" onClick={handleShow} className="me-2">
@@ -33,16 +35,20 @@ const buy = () =>{
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        { addBuy && <h1 className="text-center" style={{color:"green"}}>Buy  successfully </h1>}
+          {addBuy && (
+            <h1 className="text-center" style={{ color: "green" }}>
+              Buy successfully{" "}
+            </h1>
+          )}
 
           {productsCar.map((product) => (
-            <CardShopping  product={product} key={product.id}/>
+            <CardShopping product={product} key={product.id} />
           ))}
           <div className="d-flex justify-content-center">
-          <button onClick={buy} type="submit" class="btn btn-primary m-3 buy" >
-            comprar ahora
-          </button>
-        </div>
+            <button onClick={buy} type="submit" class="btn btn-primary m-3 buy">
+              comprar ahora
+            </button>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
     </div>

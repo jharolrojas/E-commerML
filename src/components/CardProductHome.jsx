@@ -5,7 +5,7 @@ import "../styles/CardProductHome.css";
 
 const CardProductHome = ({ product }) => {
   const navigate = useNavigate();
-  const goingToProductDetail = () => navigate(`/Product/${product.id}`)
+  const goingToProductDetail = () => navigate(`/Product/${product.id}`);
   return (
     <div className="cCard" onClick={goingToProductDetail}>
       <article className="card cardH">

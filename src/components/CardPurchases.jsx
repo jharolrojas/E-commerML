@@ -17,9 +17,9 @@ const CardPurchases = ({ purchase }) => {
         {purchase?.cart.products.map((product) => (
           <div key={product.id}>
             <div className="d-flex m-3">
-             <div onClick={() => see(product.id)} >
-              <ImageProduct product={product} />
-              </div> 
+              <div onClick={() => see(product.id)}>
+                <ImageProduct product={product} />
+              </div>
               <div className="ms-3">
                 <p onClick={() => see(product.id)} className="title">
                   {product.title}

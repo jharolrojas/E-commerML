@@ -15,12 +15,14 @@ export const purchasesSlice = createSlice({
 export const GetPurchasesThunk = () => (dispatch) => {
   dispatch(setIsLoading(true));
   return axios
-    .get("https://ecommerce-api-react.herokuapp.com/api/v1/purchases",getConfig())
+    .get(
+      "https://ecommerce-api-react.herokuapp.com/api/v1/purchases",
+      getConfig()
+    )
     .then((res) => dispatch(savePurchases(res.data.data.purchases)))
     .finally(() => dispatch(setIsLoading(false)));
 };
 export const PostPurchasesThunk = (productsCar) => (dispatch) => {
-  console.log("prueba")
   dispatch(setIsLoading(true));
   return axios
     .post(

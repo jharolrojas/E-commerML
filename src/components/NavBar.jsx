@@ -9,14 +9,12 @@ import {
   GetProductsThunk,
 } from "../store/slices/productsCrud.slice";
 import "../styles/NavBar.css";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 import CarShopping from "../page/CarShopping";
 
 import { useNavigate } from "react-router-dom";
 import { saveLogin } from "../store/slices/login.slice";
 import { saveCarShopping } from "../store/slices/carShopping.slice";
-
-
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -31,25 +29,23 @@ const NavBar = () => {
         "https://ecommerce-api-react.herokuapp.com/api/v1/products/categories"
       )
       .then((res) => SetCategories(res.data.data.categories));
-      
   }, []);
   const filterCategory = (id) => {
-    navigate("/")
+    navigate("/");
     dispatch(GetProductsByCategoryThunk(id));
   };
 
-  const submit = data => {
-    navigate("/")
+  const submit = (data) => {
+    navigate("/");
     dispatch(GetProductsFilterThunk(data.search));
-};
-const deleteUser = () =>{
-  localStorage.removeItem("user");
-  localStorage.removeItem("token");
-  dispatch(saveLogin("login up"));
-  dispatch(saveCarShopping([]));
-  dispatch(savePurchases([]));
-
-}
+  };
+  const deleteUser = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    dispatch(saveLogin("login up"));
+    dispatch(saveCarShopping([]));
+    dispatch(savePurchases([]));
+  };
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -60,21 +56,17 @@ const deleteUser = () =>{
             </div>
           </Navbar.Brand>
           <span className=" hiddentitle  me-4">E-commerce</span>
-          <Form className="d-flex cSearch"  onSubmit={handleSubmit(submit)}>
+          <Form className="d-flex cSearch" onSubmit={handleSubmit(submit)}>
             <Form.Control
               type="search"
               placeholder="Search"
               className="me-2"
               aria-label="Search"
-              {...register("search")} 
+              {...register("search")}
             />
-            <div
-              className="bottomSearch"
-            >
-              
-            </div>
+            <div className="bottomSearch"></div>
           </Form>
-       
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -108,18 +100,23 @@ const deleteUser = () =>{
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
-              <Nav.Link    href='#/Purchases'className="m-2">
+              <Nav.Link href="#/Purchases" className="m-2">
                 <i class="fas fa-history  hiddenReverse"></i> Purchases
               </Nav.Link>
-              <Nav.Link className="m-2"> <CarShopping/></Nav.Link>
-            
-             {user ? <Nav.Link onClick={deleteUser}  href="#/Login" className="m-2">
-               <i class="fas fa-sign-in-alt  hiddenReverse"></i> Logout
-             </Nav.Link> 
-               : <Nav.Link  href="#/Login" className="m-2">
-               <i class="fas fa-sign-in-alt  hiddenReverse"></i> Login
-             </Nav.Link> }
-              
+              <Nav.Link className="m-2">
+                {" "}
+                <CarShopping />
+              </Nav.Link>
+
+              {user ? (
+                <Nav.Link onClick={deleteUser} href="#/Login" className="m-2">
+                  <i class="fas fa-sign-in-alt  hiddenReverse"></i> Logout
+                </Nav.Link>
+              ) : (
+                <Nav.Link href="#/Login" className="m-2">
+                  <i class="fas fa-sign-in-alt  hiddenReverse"></i> Login
+                </Nav.Link>
+              )}
             </div>
           </Navbar.Collapse>
         </Container>
