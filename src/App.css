@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    object-fit: contain;
+}
+body{
+    background-color: #EDEDED;
+}

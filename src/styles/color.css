@@ -1,0 +1,113 @@
+/* colores segun los tipos de pokemon */
+.bug {
+    background-image: url(./assets/insecto.jpg);
+  }
+  .dark {
+    background-image: url(./assets/darck.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .dragon {
+    background-image: url(./assets/dragon.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .electric {
+    background-image: url(./assets/eletric.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .fairy {
+    background-image: url(./assets/fairy.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .fighting {
+    background-image: url(./assets/dorado.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .fire {
+    background-image: url(./assets/fuego.jpg);
+  }
+  .flying {
+    background-image: url(./assets/volador.jpg);
+  }
+  .ghost {
+    background-image: url(./assets/ghost.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .grass {
+    background-image: url(./assets/verde.jpg);
+  }
+  .ground {
+    background-image: url(./assets/ground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .ice {
+    background-image: url(./assets/ice.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .normal {
+    background-image: url(./assets/silver.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .poison {
+    background-image: url(./assets/greenPoison.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .psychic {
+    background-image: url(./assets/psychic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .rock {
+    background-image: url(./assets/rock.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .steel {
+    background-image: url(./assets/steel.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .water {
+    background-image: url(./assets/agua.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  /* colores para los start name */
+  .red {
+    color: rgb(182, 9, 9);
+  }
+  .green {
+    color: rgb(12, 235, 12);
+  }
+  .silver {
+    color: rgb(94, 94, 94);
+  }
+  .yellow {
+    color: rgb(211, 211, 0);
+  }
+
+  
+/**** GRADIENTS ****/
+.silver span {
+    background-color: silver;
+  }
+  
+  .red span {
+    background-color: red;
+  }
+  
+  .green span {
+    background-color: #a5df41;
+  }
+  .yellow span {
+    background-color: yellow;
+  }

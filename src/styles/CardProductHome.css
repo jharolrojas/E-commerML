@@ -1,0 +1,62 @@
+/* cardH */
+.cCard {
+  min-height: 350px;
+  /* background-color: red; */
+  margin: 20px;
+}
+
+.cardH {
+  width: 224px;
+  height: 300px;
+
+  transition: 0.3s;
+  border-radius: 0;
+  border: none;
+}
+.cardH:hover {
+  height: 340px;
+  box-shadow: 0px 5px 10px grey;
+}
+.cImgCard {
+  width: 224px;
+  min-height: 224px;
+  max-width: 224px;
+  max-height: 224px;
+  object-fit: contain;
+  padding: 5px;
+  border-bottom: 0.5px rgba(179, 176, 176, 0.425) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cImgCard img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.pricePrevious {
+  margin: 5px;
+  font-size: 12px;
+  color: grey;
+  opacity: 0;
+  transition: 0.3s;
+}
+.cardH:hover .pricePrevious {
+  opacity: 1;
+}
+.Off,
+.shipping {
+  color: #2fb670;
+  font-size: 13px;
+}
+.shipping {
+  font-weight: 600;
+}
+.titleProduct {
+  font-size: 13px;
+  color: grey;
+  opacity: 0;
+  transition: 0.3s;
+}
+.cardH:hover .titleProduct {
+  opacity: 1;
+}

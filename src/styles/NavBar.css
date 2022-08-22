@@ -1,0 +1,198 @@
+/* navBar */
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: #fff059 !important;
+}
+.c-img {
+  width: 50px;
+}
+.c-img img {
+  width: 100%;
+ 
+}
+.container-fluid {
+  --bs-gutter-x: 0;
+}
+  .navbar > .container-fluid {
+    justify-content: space-around !important;
+    /* flex-wrap: nowrap; */
+  }
+  .navbar {
+    --bs-navbar-brand-margin-end: 0rem !important;
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0) !important;
+  }
+  .me-2 {
+    margin-right: 0.1rem !important;
+  }
+  .form-control {
+    border-radius: 0;
+    padding: 0.375rem 3px !important;
+    border: none;
+    width: 210px !important;
+  
+  }
+  .cSearch{
+    position: relative;
+  }
+  .bottomSearch{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: rgba(185, 179, 179, 0.719);
+  }
+  .navbar-collapse {
+    padding-left: 10px;
+    background-color: #FFF;
+
+  }
+ 
+
+  .hidden,.hiddentitle{
+    display: none;
+  }
+  .hiddentitle{
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #252E7C;
+  }
+  .dropdown-menu.show {
+    background-color: #333;
+    width: 250px;
+    border-radius: 0;
+  
+}
+.dropdown-item {
+  color: #fff !important;
+  padding-left: 20px;
+
+}
+.dropdown-item:hover{
+ background-color: #1155CC;
+
+}
+@media (min-width : 400px) {
+  
+  .form-control {
+    width: 290px !important;
+  }
+  
+}
+@media (min-width : 450px) {
+  
+  .form-control {
+    width: 300px !important;
+  }
+  
+}
+@media (min-width : 500px) {
+  
+  .form-control {
+    width: 350px !important;
+  }
+  
+}
+@media (min-width : 600px) {
+  
+  .form-control {
+    width: 450px !important;
+  }
+  
+}
+@media (min-width : 700px) {
+  
+  .form-control {
+    width: 570px !important;
+  }
+  
+}
+@media (min-width : 700px) {
+  
+  .form-control {
+    width: 650px !important;
+  }
+  
+}
+@media (min-width : 990px) {
+  .navbar > .container-fluid {
+    justify-content: space-between !important;
+  
+  }
+  .navbar {
+    --bs-navbar-brand-margin-end: 1rem !important;
+    --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  .c-img {
+    width: 100px;
+    margin-left: 20px;
+  }
+  .hidden{
+    display: inline-block;
+    margin: 10px 10px !important;
+  }
+  .hiddentitle{
+    display: inline-block;
+  }
+  .form-control {
+    width: 360px !important;
+  }
+  .navbar-collapse {
+    background-color: #ffe600;
+
+  }
+  .bg-light {
+   
+    padding-bottom: 15px;
+  }
+  .c-main{
+    position: absolute;
+    display: flex;
+    top: 50px;
+    right: 10px;
+   
+  }
+  .hiddenReverse{
+    display: none !important;
+    opacity: 0;
+  }
+
+  
+}
+@media (min-width : 1000px) {
+  .appMovil{
+    position: absolute;
+    right: 0;
+    /* background-color: red; */
+    font-size: 1.3vw;
+   }
+   .form-control {
+    width: 430px !important;
+  }
+}
+@media (min-width : 1080px) {
+  
+   .form-control {
+    width: 490px !important;
+  }
+}
+@media (min-width : 1150px) {
+  
+   .form-control {
+    width: 540px !important;
+  }
+}
+@media (min-width : 1200px) {
+  
+  .form-control {
+   width: 590px !important;
+ }
+}
+@media (min-width : 1280px) {
+  
+  .form-control {
+   width: 610px !important;
+ }
+ .appMovil{
+   font-size: 1.5vw;
+ }
+}

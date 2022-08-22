@@ -1,0 +1,35 @@
+.article{
+    background-color: #FFF;
+    padding: 20px;
+    margin: 0 20px  20px 20px;
+    border-radius: 0 0 5px 5px ;
+    position: relative;
+}
+.delivered{
+    color: #2fb670;
+    font-size: 15px;
+    font-weight: 500;
+}
+.title{
+    color: grey;
+    font-size: 13px;
+}
+.date{
+    background-color: #FFF;
+    padding: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height: 47px;
+    margin-left: 20px;
+    
+    
+}
+
+.buttomSee{
+    position: absolute;
+    right: 10px;
+    top: 30%;
+}
