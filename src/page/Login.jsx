@@ -5,6 +5,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { saveToken } from "../store/slices/token.slice";
 import { useDispatch } from "react-redux/es/exports";
+import { GetPurchasesThunk } from "../store/slices/purchases.slice";
+import { GetProductsCarThunk } from "../store/slices/carShopping.slice";
+import { useEffect } from "react";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
@@ -21,14 +24,14 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify(res.data.data));
         navigate("/");
         dispatch(saveToken(res.data.data.token));
-        localStorage.setItem("token", res.data.data.token);
         dispatch(GetPurchasesThunk());
-        dispatch(GetProductsCarThunk());
+       dispatch(GetProductsCarThunk());
+        localStorage.setItem("token", res.data.data.token);
       })
       .catch(
         setTimeout(function () {
           setInvaid(true);
-        }, 2000)
+        }, 1000)
       );
   };
 
@@ -46,8 +49,8 @@ const Login = () => {
           onSubmit={handleSubmit(submit)}
         >
           <div className="form-group m-2">
-            <label for="exampleInputEmail1" className="label">
-              Email: <i class="fas fa-envelope"></i> GratisUser@gmail.com{" "}
+            <label htmlFor="exampleInputEmail1" className="label">
+              Email: <i className="fas fa-envelope"></i> GratisUser@gmail.com{" "}
             </label>
             <input
               type="email"
@@ -58,8 +61,8 @@ const Login = () => {
             />
           </div>
           <div className="form-group m-1 mb-0">
-            <label for="exampleInputPassword1" className="label">
-              Password: <i class="fas fa-lock"></i> 123456
+            <label htmlFor="exampleInputPassword1" className="label">
+              Password: <i className="fas fa-lock"></i> 123456
             </label>
             <input
               type="password"

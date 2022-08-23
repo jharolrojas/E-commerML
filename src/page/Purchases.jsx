@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CardPurchases from "../components/CardPurchases";
+import { GetProductsThunk } from "../store/slices/productsCrud.slice";
 import { GetPurchasesThunk } from "../store/slices/purchases.slice";
 import "../styles/Purchases.css";
 
@@ -9,7 +10,10 @@ const Purchases = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(GetProductsThunk());
     dispatch(GetPurchasesThunk());
+   
+    
   }, []);
 
   return (

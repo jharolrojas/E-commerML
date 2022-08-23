@@ -5,6 +5,7 @@ import purchasesSlice from "./slices/purchases.slice";
 import tokenSlice from "./slices/token.slice";
 import carShoppingSlice from "./slices/carShopping.slice";
 import loginSlice from "./slices/login.slice";
+import isLoadingSlice from "./slices/isLoading.slice";
 
 export default configureStore({
   reducer: {
@@ -14,5 +15,6 @@ export default configureStore({
     token: tokenSlice,
     carShopping: carShoppingSlice,
     Login: loginSlice,
+    isLoading: isLoadingSlice
   },
 });

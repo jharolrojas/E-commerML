@@ -15,6 +15,7 @@ import CarShopping from "../page/CarShopping";
 import { useNavigate } from "react-router-dom";
 import { saveLogin } from "../store/slices/login.slice";
 import { saveCarShopping } from "../store/slices/carShopping.slice";
+import { GetPurchasesThunk, savePurchases } from "../store/slices/purchases.slice";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -101,7 +102,7 @@ const NavBar = () => {
                 ))}
               </NavDropdown>
               <Nav.Link href="#/Purchases" className="m-2">
-                <i class="fas fa-history  hiddenReverse"></i> Purchases
+                <i class="fas fa-history  hiddenReverse" onClick={()=>dispatch(GetPurchasesThunk())}></i> Purchases
               </Nav.Link>
               <Nav.Link className="m-2">
                 {" "}
