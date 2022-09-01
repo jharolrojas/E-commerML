@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav, Form, NavDropdown } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch  } from "react-redux";
 import logo from "../assets/logo.png";
 import {
   GetProductsByCategoryThunk,
@@ -16,6 +16,8 @@ import { useNavigate } from "react-router-dom";
 import { saveLogin } from "../store/slices/login.slice";
 import { saveCarShopping } from "../store/slices/carShopping.slice";
 import { GetPurchasesThunk, savePurchases } from "../store/slices/purchases.slice";
+
+
 
 const NavBar = () => {
   const dispatch = useDispatch();

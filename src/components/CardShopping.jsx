@@ -1,12 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { DeleteProductCarThunk } from "../store/slices/carShopping.slice";
+import { DeleteProductCarThunk, GetProductsCarThunk } from "../store/slices/carShopping.slice";
+import { saveCoundSubtract } from "../store/slices/countShopping.slice";
 import ImageProduct from "./ImageProduct";
 
 const CardShopping = ({ product }) => {
   const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(GetProductsCarThunk());
+  },[])
   const deleteProduct = () => {
     dispatch(DeleteProductCarThunk(product.id));
+    dispatch(saveCoundSubtract());
   };
   return (
     <div class="card m-2" style={{ width: "18rem" }}>

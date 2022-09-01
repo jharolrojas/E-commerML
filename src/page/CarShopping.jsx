@@ -6,7 +6,9 @@ import {
   GetProductsCarThunk,
   saveCarShopping,
 } from "../store/slices/carShopping.slice";
+import { saveReset } from "../store/slices/countShopping.slice";
 import { PostPurchasesThunk } from "../store/slices/purchases.slice";
+import '../styles/carShopping.css'
 
 const CarShopping = () => {
   const [addBuy, setAddBuy] = useState(false);
@@ -15,6 +17,8 @@ const CarShopping = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useDispatch();
+  const count = useSelector(state => state.countShopping);
+
   useEffect(() => {
     dispatch(GetProductsCarThunk());
   }, []);
@@ -24,11 +28,12 @@ const CarShopping = () => {
     dispatch(PostPurchasesThunk(productsCar));
     dispatch(saveCarShopping([]));
     setAddBuy(true);
+    dispatch(saveReset())
   };
   return (
     <div>
-      <div variant="primary" onClick={handleShow} className="me-2">
-        Shopping car
+      <div variant="primary" onClick={handleShow} className="me-2 cConunt">
+        Shopping car  <p className={` countSC ${ count > 0 && "countBackground"}`}>{count}</p>
       </div>
       <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>

@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import getConfig from "../../utils/GetConfig";
 import { setIsLoading } from "./isLoading.slice";
 import axios from "axios";
+import { saveCound } from "./countShopping.slice";
 
 export const carShoppingSlice = createSlice({
   name: "carShopping",
@@ -28,7 +29,7 @@ export const PostProductCarThunk = (body) => (dispatch) => {
       body,
       getConfig()
     )
-    .then(() => dispatch(GetProductsCarThunk()))
+    .then(() => dispatch(GetProductsCarThunk(), dispatch(saveCound())))
     .finally(() => dispatch(setIsLoading(false)));
 };
 export const DeleteProductCarThunk = (id) => (dispatch) => {

@@ -8,7 +8,8 @@ const CardProductRelated = ({ product }) => {
   const goingToProductDetail = () => navigate(`/Product/${product.id}`);
   return (
     <div className="cCardR">
-      <article className="cardR d-flex" onClick={goingToProductDetail}>
+
+      <article className="cardR d-flex" onClick={goingToProductDetail} >
         <div className="cImgCardR">
           <img src={product.productImgs[0]} alt="product image" />
         </div>
@@ -26,6 +27,7 @@ const CardProductRelated = ({ product }) => {
           <h1 className="titleProductR ms-2 mt-2">{product.title}</h1>
         </div>
       </article>
+      
     </div>
   );
 };

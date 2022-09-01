@@ -1,0 +1,22 @@
+
+.cConunt{
+    position: relative;
+    width: 110px;
+}
+.countSC{
+  
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+   
+  }
+  .countBackground{
+    background-color: red;
+  }
