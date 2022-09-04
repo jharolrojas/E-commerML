@@ -28,7 +28,8 @@
     border-radius: 0;
     padding: 0.375rem 3px !important;
     border: none;
-    width: 210px !important;
+    width: 180px !important;
+    
   
   }
   .cSearch{
@@ -73,7 +74,7 @@
 @media (min-width : 400px) {
   
   .form-control {
-    width: 290px !important;
+    width: 270px !important;
   }
   
 }
@@ -98,17 +99,12 @@
   }
   
 }
+
+
 @media (min-width : 700px) {
   
   .form-control {
     width: 570px !important;
-  }
-  
-}
-@media (min-width : 700px) {
-  
-  .form-control {
-    width: 650px !important;
   }
   
 }
@@ -134,7 +130,7 @@
     display: inline-block;
   }
   .form-control {
-    width: 360px !important;
+    width: 350px !important;
   }
   .navbar-collapse {
     background-color: #ffe600;
@@ -166,31 +162,31 @@
     font-size: 1.3vw;
    }
    .form-control {
-    width: 430px !important;
+    width: 405px !important;
   }
 }
 @media (min-width : 1080px) {
   
    .form-control {
-    width: 490px !important;
+    width: 450px !important;
   }
 }
 @media (min-width : 1150px) {
   
    .form-control {
-    width: 540px !important;
+    width: 520px !important;
   }
 }
 @media (min-width : 1200px) {
   
   .form-control {
-   width: 590px !important;
+   width: 550px !important;
  }
 }
 @media (min-width : 1280px) {
   
   .form-control {
-   width: 610px !important;
+   width: 570px !important;
  }
  .appMovil{
    font-size: 1.5vw;

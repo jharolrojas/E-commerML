@@ -7,7 +7,7 @@ const CardProductHome = ({ product }) => {
   const navigate = useNavigate();
   const goingToProductDetail = () => navigate(`/Product/${product.id}`);
   return (
-    <div className="cCard" onClick={goingToProductDetail}>
+    <div className="cCard" onClick={goingToProductDetail} translate="no">
       <article className="card cardH">
         <div className="cImgCard">
           <img src={product.productImgs[0]} alt="product image" />

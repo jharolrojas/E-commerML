@@ -25,10 +25,13 @@ const CarShopping = () => {
   const productsCar = useSelector((state) => state.carShopping);
 
   const buy = () => {
-    dispatch(PostPurchasesThunk(productsCar));
-    dispatch(saveCarShopping([]));
-    setAddBuy(true);
-    dispatch(saveReset())
+    if (count > 0) {
+      dispatch(PostPurchasesThunk(productsCar));
+      dispatch(saveCarShopping([]));
+      setAddBuy(true);
+      dispatch(saveReset())
+    }
+ 
   };
   return (
     <div>
@@ -51,7 +54,7 @@ const CarShopping = () => {
           ))}
           <div className="d-flex justify-content-center">
             <button onClick={buy} type="submit" class="btn btn-primary m-3 buy">
-              comprar ahora
+              Buy now
             </button>
           </div>
         </Offcanvas.Body>

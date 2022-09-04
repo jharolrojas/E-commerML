@@ -31,7 +31,7 @@ const Login = () => {
       .catch(
         setTimeout(function () {
           setInvaid(true);
-        }, 1000)
+        }, 2000)
       );
   };
 
@@ -50,7 +50,7 @@ const Login = () => {
         >
           <div className="form-group m-2">
             <label htmlFor="exampleInputEmail1" className="label">
-              Email: <i className="fas fa-envelope"></i> GratisUser@gmail.com{" "}
+              Email: <i className="fas fa-envelope"></i> rootUser@gmail.com{" "}
             </label>
             <input
               type="email"
