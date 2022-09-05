@@ -130,10 +130,10 @@
     display: inline-block;
   }
   .form-control {
-    width: 350px !important;
+    width: 330px !important;
   }
   .navbar-collapse {
-    background-color: #ffe600;
+    background-color: #fff059;
 
   }
   .bg-light {

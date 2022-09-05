@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { GetProductDetailThunk } from "../store/slices/productDetail.slice";
 import "../styles/ProductDetail.css";
 import star from "../assets/star.png";
@@ -14,6 +14,7 @@ const ProductDetail = () => {
   const { register, handleSubmit } = useForm();
   const { id } = useParams();
   const dispatch = useDispatch();
+  const navigator = useNavigate()
   useEffect(() => {
     dispatch(GetProductDetailThunk(id));
   }, [id]);
@@ -28,14 +29,16 @@ const ProductDetail = () => {
     dispatch(PostProductCarThunk(body));
   };
   const addProduct = () => {
-    setAddProducts(true);
+    if (localStorage.getItem('token'))  setAddProducts(true);
+    else navigator('/Login');
+    
   };
   return (
     <>
       {addProducts && (
-        <h1 className="text-center" style={{ color: "green" }}>
+        <h4 className="text-center" style={{ color: "green" }}>
           product added successfully{" "}
-        </h1>
+        </h4>
       )}
       <div className="container d-flex flex-wrap">
         <aside>
