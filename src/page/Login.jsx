@@ -62,7 +62,7 @@ const Login = () => {
           </div>
           <div className="form-group m-1 mb-0">
             <label htmlFor="exampleInputPassword1" className="label">
-              Password: <i className="fas fa-lock"></i> 123456
+              Password: <i className="fas fa-lock"></i> Jharol512
             </label>
             <input
               type="password"
