@@ -134,7 +134,7 @@ const ProductDetail = () => {
                   type="submit"
                   class="btn btn-primary m-3 buy"
                 >
-                  Buy now
+                 Add to cart
                 </button>
               </div>
             </form>
