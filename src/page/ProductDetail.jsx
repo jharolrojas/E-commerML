@@ -40,7 +40,7 @@ const ProductDetail = () => {
           product added successfully{" "}
         </h4>
       )}
-      <div className="container d-flex flex-wrap">
+      <div className="container d-flex flex-wrap" >
         <aside>
           {product.productImgs?.map((img) => (
             <div
