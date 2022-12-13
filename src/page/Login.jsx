@@ -17,7 +17,7 @@ const Login = () => {
   const submit = (data) => {
     axios
       .post(
-        `https://ecommerce-api-react.herokuapp.com/api/v1/users/login`,
+        `https://e-commerce-api.academlo.tech/api/v1/users/login`,
         data
       )
       .then((res) => {
@@ -50,7 +50,7 @@ const Login = () => {
         >
           <div className="form-group m-2">
             <label htmlFor="exampleInputEmail1" className="label">
-              Email: <i className="fas fa-envelope"></i> rootUser@gmail.com{" "}
+              Email: <i className="fas fa-envelope"></i> jharol@gmail.com{" "}
             </label>
             <input
               type="email"
@@ -62,7 +62,7 @@ const Login = () => {
           </div>
           <div className="form-group m-1 mb-0">
             <label htmlFor="exampleInputPassword1" className="label">
-              Password: <i className="fas fa-lock"></i> Jharol512
+              Password: <i className="fas fa-lock"></i> 01234567899
             </label>
             <input
               type="password"

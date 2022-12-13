@@ -15,7 +15,7 @@ export const productDetalSlice = createSlice({
 export const GetProductDetailThunk = (id) => (dispatch) => {
   dispatch(setIsLoading(true));
   return axios
-    .get(`https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`)
+    .get(`https://e-commerce-api.academlo.tech/api/v1/products/${id}`)
     .then((res) => dispatch(saveProductDetail(res.data.data.product)))
     .finally(() => dispatch(setIsLoading(false)));
 };

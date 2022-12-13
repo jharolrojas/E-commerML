@@ -29,7 +29,7 @@ const NavBar = () => {
   useEffect(() => {
     axios
       .get(
-        "https://ecommerce-api-react.herokuapp.com/api/v1/products/categories"
+        "https://e-commerce-api.academlo.tech/api/v1/products/categories"
       )
       .then((res) => SetCategories(res.data.data.categories));
   }, []);

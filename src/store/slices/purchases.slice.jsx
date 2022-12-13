@@ -16,7 +16,7 @@ export const GetPurchasesThunk = () => (dispatch) => {
   dispatch(setIsLoading(true));
   return axios
     .get(
-      "https://ecommerce-api-react.herokuapp.com/api/v1/purchases",
+      "https://e-commerce-api.academlo.tech/api/v1/purchases",
       getConfig()
     )
     .then((res) => dispatch(savePurchases(res.data.data.purchases)))
@@ -26,7 +26,7 @@ export const PostPurchasesThunk = (productsCar) => (dispatch) => {
   dispatch(setIsLoading(true));
   return axios
     .post(
-      "https://ecommerce-api-react.herokuapp.com/api/v1/purchases",
+      "https://e-commerce-api.academlo.tech/api/v1/purchases",
       productsCar,
       getConfig()
     )

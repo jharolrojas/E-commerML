@@ -1,6 +1,6 @@
 /* cardH */
 .cCard {
-  min-height: 350px;
+  min-height: 355px;
 
   margin: 20px;
 }
@@ -14,7 +14,7 @@
   border: none;
 }
 .cardH:hover {
-  height: 340px;
+  height: 355px;
   box-shadow: 0px 5px 10px grey;
 }
 .cImgCard {
