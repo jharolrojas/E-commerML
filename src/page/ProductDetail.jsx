@@ -14,7 +14,7 @@ const ProductDetail = () => {
   const { register, handleSubmit } = useForm();
   const { id } = useParams();
   const dispatch = useDispatch();
-  const navigator = useNavigate()
+  const navigator = useNavigate();
   useEffect(() => {
     dispatch(GetProductDetailThunk(id));
   }, [id]);
@@ -29,18 +29,24 @@ const ProductDetail = () => {
     dispatch(PostProductCarThunk(body));
   };
   const addProduct = () => {
-    if (localStorage.getItem('token'))  setAddProducts(true);
-    else navigator('/Login');
-    
+    if (localStorage.getItem("token")) setAddProducts(true);
+    else navigator("/Login");
+  };
+  const alerts = () => {
+    Swal.fire({
+      title: "product added successfully",
+      background: "#FFF",
+      color: "black",
+      icon: "success",
+      confirmButtonColor:"#81DF03"
+    });
+
+    setAddProducts(!addProducts);
   };
   return (
     <>
-      {addProducts && (
-        <h4 className="text-center" style={{ color: "green" }}>
-          product added successfully{" "}
-        </h4>
-      )}
-      <div className="container d-flex flex-wrap" >
+      {addProducts && alerts()}
+      <div className="container d-flex flex-wrap">
         <aside>
           {product.productImgs?.map((img) => (
             <div
@@ -134,7 +140,7 @@ const ProductDetail = () => {
                   type="submit"
                   class="btn btn-primary m-3 buy"
                 >
-                 Add to cart
+                  Add to cart
                 </button>
               </div>
             </form>

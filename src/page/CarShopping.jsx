@@ -30,6 +30,15 @@ const CarShopping = () => {
       dispatch(saveCarShopping([]));
       setAddBuy(true);
       dispatch(saveReset())
+    
+        Swal.fire({
+          title: "product added successfully",
+          background: "#FFF",
+          color: "black",
+          icon: "success",
+          confirmButtonColor:"#81DF03"
+        });
+    
     }
  
   };
@@ -43,11 +52,11 @@ const CarShopping = () => {
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {addBuy && (
+          {/* {addBuy && (
             <h1 className="text-center" style={{ color: "green" }}>
               Buy successfully{" "}
             </h1>
-          )}
+          )} */}
 
           {productsCar.map((product) => (
             <CardShopping product={product} key={product.id} />
